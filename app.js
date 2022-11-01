@@ -7,7 +7,11 @@
 
 
 // Event handling, user interaction is what starts the code execution.
-
+console.log('Здравствуйте!\n\nелси Вас не затруднит, проверьте пожалуйста и оставьте свои данные для связи в случае проблем/вопросов\n\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\n\nодна из причин, не та ссылка была засабмичена, оставляю на PR здесь https://github.com/Antonowka/clean-code-s1e1/pull/5\n\nСпасибо большое за понимание!')
+if (
+	window.confirm('Здравствуйте!\nЕсли Вы нажмете <ok> то перейдете на мою страницу github с pull request.\nПри клике на <отмена> сможете проверить работоспособность приложения. В консоле продублирую ссылку на pull request.\n\nИзвиняюсь за неудобство\n\nПо своей глупости натворил делов на гитхабе, из-за чего переделывал задание и в спешке засабмитил не ту ссылку.')) {
+	window.location.href = 'https://github.com/Antonowka/clean-code-s1e1/pull/5';
+};
 var taskInput = document.getElementById("new__task"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTaskHolder = document.getElementById("incomplete__tasks"); //ul of #incompleteTasks
@@ -125,7 +129,7 @@ var taskIncomplete = function () {
 	bindTaskEvents(listItem, taskCompleted);
 }
 
-var ajaxRequest=function(){
+var ajaxRequest = function () {
 
 }
 
