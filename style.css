@@ -142,7 +142,7 @@ body {
 }
 
 /* Completed */
-#completed-tasks {
+#completed__tasks {
 	text-decoration: line-through;
 	color: #888;
 }
@@ -152,11 +152,11 @@ body {
 	display: none;
 }
 
-.editMode .task__item-input {
+.edit__mode .task__item-input {
 	display: inline-block;
 	width: 224px;
 }
 
-.editMode .task__item-label {
+.edit__mode .task__item-label {
 	display: none;
 }
