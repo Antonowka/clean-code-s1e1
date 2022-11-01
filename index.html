@@ -23,45 +23,45 @@
 
 	<main class="main">
 
-		<section id="topSectionForAddingElementToList">
+		<section class="task__add">
 			<label for="new-task">Add Item</label>
 			<div class="task-row-wrapper">
-				<input id="new-task" class="task" type="text">
-				<button>Add</button>
+				<input id="new-task" class="task__item" type="text">
+				<button class="button button__add">Add</button>
 			</div>
 		</section>
 
-		<section>
+		<section class="task__incomplete">
 			<h3>Todo</h3>
 			<ul id="incompleteTasks">
 				<li><input type="checkbox">
-					<label class="task">Pay Bills</label>
-					<input type="text" class="task">
-					<button class="edit">Edit</button>
-					<button class="delete">
+					<label class="task__item">Pay Bills</label>
+					<input type="text" class="task__item">
+					<button class="button button__edit">Edit</button>
+					<button class="button button__delete">
 						<img src="./remove.svg" alt="button delet icon">
 					</button>
 				</li>
 				<li class="editMode">
 					<input type="checkbox">
-					<label class="task">Go Shopping</label>
-					<input type="text" value="Go Shopping" class="task">
-					<button class="edit">Save</button>
-					<button class="delete">
+					<label class="task__item">Go Shopping</label>
+					<input type="text" value="Go Shopping" class="task__item">
+					<button class="button button__edit">Save</button>
+					<button class="button button__delete">
 						<img src="./remove.svg" alt="button delet icon">
 					</button>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+		<section class="task__completed">
 			<h3>Completed</h3>
 			<ul id="completed-tasks">
 				<li><input type="checkbox" checked>
-					<label class="task">See the Doctor</label>
-					<input type="text" class="task">
-					<button class="edit">Edit</button>
-					<button class="delete">
+					<label class="task__item">See the Doctor</label>
+					<input type="text" class="task__item">
+					<button class="button button__edit">Edit</button>
+					<button class="button button__delete">
 						<img src="./remove.svg" alt="button delet icon">
 					</button>
 				</li>
