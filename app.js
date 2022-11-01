@@ -7,8 +7,6 @@
 
 
 // Event handling, user interaction is what starts the code execution.
-alert('Здравствуйте!\n\nелси Вас не затруднит, проверьте пожалуйста максимально оттянув время или оставив свои данные для связи\n\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\n\nодна из причин, не та ссылка была засабмичена, оставляю ее в консоле и в алерте https://github.com/Antonowka/clean-code-s1e1/pull/5\n\nСпасибо большое за понимание!')
-console.log('Здравствуйте!\n\nелси Вас не затруднит, проверьте пожалуйста максимально оттянув время или оставив свои данные для связи\n\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\n\nодна из причин, не та ссылка была засабмичена, оставляю ее в консоле и в алерте https://github.com/Antonowka/clean-code-s1e1/pull/5\n\nСпасибо большое за понимание!')
 
 var taskInput = document.getElementById("new__task"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
@@ -47,7 +45,7 @@ var createNewTaskElement = function (taskString) {
 	editButton.className = "button button__edit";
 
 	deleteButton.className = "button button__delete";
-	deleteButtonImg.src = './remove.svg';
+	deleteButtonImg.src = './assets/remove.svg';
 	deleteButtonImg.className = 'button__delete-img';
 	deleteButton.appendChild(deleteButtonImg);
 
@@ -64,7 +62,6 @@ var createNewTaskElement = function (taskString) {
 
 
 var addTask = function () {
-
 	//Create a new list item with the text from the #new-task:
 	if (!taskInput.value) return;
 	var listItem = createNewTaskElement(taskInput.value);
@@ -74,13 +71,11 @@ var addTask = function () {
 	bindTaskEvents(listItem, taskCompleted);
 
 	taskInput.value = "";
-
 }
 
 //Edit an existing task.
 
 var editTask = function () {
-
 	var listItem = this.parentNode;
 
 	var editInput = listItem.querySelector('input[type=text]');
@@ -105,8 +100,6 @@ var editTask = function () {
 
 //Delete task.
 var deleteTask = function () {
-
-
 	var listItem = this.parentNode;
 	var ul = listItem.parentNode;
 	//Remove the parent list item from the ul.
@@ -116,8 +109,6 @@ var deleteTask = function () {
 
 //Mark task completed
 var taskCompleted = function () {
-
-
 	//Append the task list item to the #completed-tasks
 	var listItem = this.parentNode;
 	completedTasksHolder.appendChild(listItem);
@@ -126,13 +117,16 @@ var taskCompleted = function () {
 }
 
 var taskIncomplete = function () {
-
 	//Mark task as incomplete.
 	//When the checkbox is unchecked
 	//Append the task list item to the #incompleteTasks.
 	var listItem = this.parentNode;
 	incompleteTaskHolder.appendChild(listItem);
 	bindTaskEvents(listItem, taskCompleted);
+}
+
+var ajaxRequest=function(){
+
 }
 
 //Set the click handler to the addTask function.
