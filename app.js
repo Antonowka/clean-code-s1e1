@@ -7,7 +7,8 @@
 
 
 // Event handling, user interaction is what starts the code execution.
-alert('Здравствуйте!\nелси Вас не затруднит, проверьте пожалуйста задание завтра\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\nСпасибо большое за понимание!')
+// alert('Здравствуйте!\nелси Вас не затруднит, проверьте пожалуйста задание завтра\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\nСпасибо большое за понимание!')
+// console.log('Здравствуйте!\nелси Вас не затруднит, проверьте пожалуйста задание завтра\nпо своей глупости натворил делов на гитхабе, из-за чего сейчас переделываю задание\nСпасибо большое за понимание!')
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
