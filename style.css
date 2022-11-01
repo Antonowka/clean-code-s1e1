@@ -2,7 +2,7 @@
 body {
 	background-color: #f8f8f8;
 	color: #333;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 }
 /* HEADER */
 
@@ -18,7 +18,7 @@ body {
 }
 
 .header__info {
-	font-family: 'fantasy', cursive;
+	font-family: "fantasy", cursive;
 }
 
 @media (max-width: 768px) {
@@ -63,7 +63,7 @@ body {
 	color: #888;
 	font-size: 15px;
 	width: 60px;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	cursor: pointer;
 }
 .button:hover {
@@ -149,7 +149,7 @@ body {
 
 /* Edit Task */
 .task__item-input {
-	display: none;-
+	display: none;
 }
 
 .editMode .task__item-input {
