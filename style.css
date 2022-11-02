@@ -1,30 +1,26 @@
-/* Basic Style */
-body {
-  background-color: #f8f8f8;
-  color: #333;
-  font-family: "Lato", sans-serif;
+/* INTRO*/
+body{
+  margin: 0;
 }
 
-/* HEADER */
-
-.header {
+.intro {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.header__img {
+.intro__img {
   width: 100%;
 }
 
-.header__info {
+.intro__info {
   font-family: "fantasy", cursive;
 }
 
 @media (max-width: 768px) {
 
-  .header {
+  .intro {
     text-align: center;
   }
   
@@ -32,11 +28,16 @@ body {
 
 /* MAIN */
 .main {
-  display: block;
+  background: #f8f8f8;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+}
+
+.task {
   width: 500px;
   margin: 0 auto 0;
 }
-
 .task__item {
   width: 56%;
   display: inline-block;
@@ -115,7 +116,6 @@ body {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
