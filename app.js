@@ -12,10 +12,10 @@ if (
   window.confirm('Здравствуйте!\nЕсли Вы нажмете <ok> то перейдете на мою страницу github с pull request.\nПри клике на <отмена> сможете проверить работоспособность приложения. В консоле продублирую ссылку на pull request.\n\nИзвиняюсь за неудобство\n\nПо своей глупости натворил делов на гитхабе, из-за чего переделывал задание и в спешке засабмитил не ту ссылку.')) {
   window.location.href = 'https://github.com/Antonowka/clean-code-s1e1/pull/5';
 };
-var taskInput = document.getElementById("new__task"); //Add a new task.
+var taskInput = document.getElementById("new-task"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
-var incompleteTaskHolder = document.getElementById("incomplete__tasks"); //ul of #incompleteTasks
-var completedTasksHolder = document.getElementById("completed__tasks"); //completed-tasks
+var incompleteTaskHolder = document.getElementById("incomplete-tasks"); //ul of #incompleteTasks
+var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
 
 
 //New task list item
@@ -36,15 +36,15 @@ var createNewTaskElement = function (taskString) {
   var deleteButton = document.createElement("button"); //delete button
   var deleteButtonImg = document.createElement("img"); //delete button image
 
-  listItem.classList = 'task__items-wrapper';
+  listItem.classList = 'task__item';
 
   label.innerText = taskString;
-  label.className = 'task__item task__label';
+  label.className = "task__label";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
   checkBox.className = "task__checked";
-  editInput.className = "task__item task__input";
+  editInput.className = "task__input";
   editInput.type = "text";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
@@ -52,7 +52,7 @@ var createNewTaskElement = function (taskString) {
 
   deleteButton.className = "button button-delete";
   deleteButtonImg.src = './assets/remove.svg';
-  deleteButtonImg.className = 'button-img';
+  deleteButtonImg.className = 'button__img';
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,11 +87,11 @@ var editTask = function () {
   var editInput = listItem.querySelector('input[type=text]');
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".button-edit");
-  var containsClass = listItem.classList.contains("edit__mode");
-  //If class of the parent is .edit__mode
+  var containsClass = listItem.classList.contains("task__item_edit-mode");
+  //If class of the parent is .task__item_edit-mode
   if (containsClass) {
 
-    //switch to .edit__mode
+    //switch to .task__item_edit-mode
     //label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
@@ -100,8 +100,8 @@ var editTask = function () {
     editBtn.innerText = "Save";
   }
 
-  //toggle .edit__mode on the parent.
-  listItem.classList.toggle("edit__mode");
+  //toggle .task__item_edit-mode on the parent.
+  listItem.classList.toggle("task__item_edit-mode");
 };
 
 //Delete task.
